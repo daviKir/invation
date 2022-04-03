@@ -23,20 +23,51 @@ function handleSubmit(e) {
   });
 
   if (validationData(requestData)) {
+    document.getElementsByClassName('form-submit-button-text')[0].style.display = 'none';
+    document.getElementsByClassName('lds-ring')[0].style.display = 'inline-block';
+
     fetch(requestUrl, {
       method: 'POST',
-      body: new URLSearchParams(requestData)
+      body: new URLSearchParams(requestData),
     })
-      .then(function (res) {
-        return res.json()
-      })
-      .then(function (data) {
-        // TODO success
+      .then(function () {
+        openModal('Принято!', 'Приходить <br> AG LOFT “Веранда” <br> Варшавское ш., 33 с. 3 <br> 23 июля 2022 к 18:00');
+        disableScroll();
+
+        document.getElementsByClassName('form-submit-button-text')[0].style.display = 'block';
+        document.getElementsByClassName('lds-ring')[0].style.display = 'none';
       })
       .catch(function (err) {
-        // TODO error
+        openModal('Ошибка!', 'Попробуйте позже');
+        document.getElementsByClassName('form-submit-button-text')[0].style.display = 'block';
+        document.getElementsByClassName('lds-ring')[0].style.display = 'none';
       });
   }
+}
+
+function openModal(title, text) {
+  var modal = document.getElementsByClassName('modal')[0];
+  modal.style.opacity = '1';
+  modal.style.zIndex = '100';
+
+  var modalContent = document.getElementsByClassName('modal-content')[0];
+
+  modalContent.children[0].innerHTML = title;
+  modalContent.children[1].innerHTML = text;
+
+  modalContent.style.transitionDuration = 1 + 's';
+  modalContent.classList.add('animation-finish');
+
+  var modalButton = document.getElementsByClassName('modal-button')[0];
+  modalButton.addEventListener('click', function () {
+    modalContent.classList.remove('animation-finish');
+    modal.style.opacity = '0';
+    modal.style.zIndex = '-1';
+
+    formReset();
+
+    enableScroll();
+  })
 }
 
 function prepareRequestData(data) {
@@ -145,4 +176,59 @@ function handleChangeBooze(event) {
   } else {
     event.target.parentElement.children[0].classList.remove('form-checkbox-checked');
   }
+}
+
+function formReset() {
+  form.reset();
+
+  var rs = document.getElementsByClassName('form-radio-checked');
+  var cs = document.getElementsByClassName('form-checkbox-checked');
+  for (var r of rs) {
+    r.classList.remove('form-radio-checked');
+  }
+  for (var c of cs) {
+    c.classList.remove('form-checkbox-checked');
+  }
+
+  window.scroll(0, 0);
+}
+
+var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+function preventDefault(e) {
+  e.preventDefault();
+}
+
+function preventDefaultForScrollKeys(e) {
+  if (keys[e.keyCode]) {
+    preventDefault(e);
+    return false;
+  }
+}
+
+var supportsPassive = false;
+try {
+  window.addEventListener('test', null, Object.defineProperty({}, 'passive', {
+    get: function () {
+      supportsPassive = true;
+    }
+  }));
+} catch (e) {
+}
+
+var wheelOpt = supportsPassive ? {passive: false} : false;
+var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+function disableScroll() {
+  window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+  window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+  window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+
+function enableScroll() {
+  window.removeEventListener('DOMMouseScroll', preventDefault, false);
+  window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
+  window.removeEventListener('touchmove', preventDefault, wheelOpt);
+  window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 }

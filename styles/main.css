@@ -472,6 +472,58 @@ body {
   transform-origin: 0 0;
 }
 
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+
+}
+
+.modal-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  width: 300px;
+  padding: 20px;
+  background: #fff6de;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 #000;
+  z-index: 101;
+}
+
+.modal-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 28px;
+  border: none;
+  background: #6864AE;
+  border-radius: 11px;
+  font-size: 12px;
+  color: #fff;
+  cursor: pointer;
+  min-width: 120px;
+  margin: 30px auto 0;
+}
+
+.modal-button:hover {
+  background-color: #c3c2e1;
+  color: #292626;
+}
+
 .animation {
   transition-property: opacity,transform;
   transition-timing-function: cubic-bezier(.19,1,.22,1);
@@ -531,6 +583,47 @@ body {
 .program-snippet {
   transition-duration: 2s;
 }
+
+.lds-ring {
+  display: none;
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 @keyframes headAnimation {
   from {

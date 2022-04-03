@@ -52,6 +52,7 @@
   font-size: 12px;
   color: #fff;
   cursor: pointer;
+  min-width: 120px;
 }
 
 .form-radio-button-outer {
