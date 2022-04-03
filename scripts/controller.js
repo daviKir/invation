@@ -31,7 +31,7 @@ function handleSubmit(e) {
       body: new URLSearchParams(requestData),
     })
       .then(function () {
-        openModal('Принято!', 'Приходить <br> AG LOFT “Веранда” <br> Варшавское ш., 33 с. 3 <br> 23 июля 2022 к 18:00');
+        openModal('Принято!');
         disableScroll();
 
         document.getElementsByClassName('form-submit-button-text')[0].style.display = 'block';
@@ -53,7 +53,9 @@ function openModal(title, text) {
   var modalContent = document.getElementsByClassName('modal-content')[0];
 
   modalContent.children[0].innerHTML = title;
-  modalContent.children[1].innerHTML = text;
+  if (text) {
+    modalContent.children[1].innerHTML = text;
+  }
 
   modalContent.style.transitionDuration = 1 + 's';
   modalContent.classList.add('animation-finish');
