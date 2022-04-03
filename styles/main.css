@@ -160,6 +160,10 @@ body {
   text-align: center;
 }
 
+.smile {
+  height: 18px;
+}
+
 .text-pad {
   padding: 0 50px;
 }
@@ -681,6 +685,10 @@ body {
 
   .text {
     font-size: 13px;
+  }
+
+  .smile {
+    height: 13px;
   }
 
   .text-pad {
