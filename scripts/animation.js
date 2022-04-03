@@ -3,7 +3,7 @@ setTimeout(function () {
   for (const headerElement of headerElements) {
     headerElement.classList.add('animation-finish')
   }
-}, 100);
+}, 1000);
 
 document.addEventListener('scroll', handleScroll);
 
