@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/timer.js" defer></script>
+  <script src="scripts/controller.js" defer></script>
+  <script src="scripts/animation.js" defer></script>
+  <script src="scripts/posit.js" defer></script>
+  <title>Приглашение на свадьбу</title>
+</head>
+<body>
+<div class="wrapper">
+  <header class="header">
+    <div class="header-bg"></div>
+    <div class="header-layer"></div>
+    <div class="header-content">
+      <h1 class="head-title caption header-text animation animation-start head-title-animation">
+        Андрей
+        <br>
+        и
+        <br>
+        Анаит
+      </h1>
+      <div class="date-group caption header-text animation animation-start date-group-animation">
+        <div class="lined-text">Суббота</div>
+        <div class="day-year">
+          <span class="day">23</span>
+          <br>
+          <span class="year">2022</span>
+        </div>
+        <div class="lined-text">июля</div>
+      </div>
+      <div class="time-left caption header-text animation animation-start time-left-animation">До свадьбы осталось</div>
+      <div class="timer caption header-text animation animation-start timer-animation">
+        <div class="time-block">
+          <div class="timer-day"></div>
+          <div class="timer-day-title timer-title"></div>
+        </div>
+        <span class="pipe">|</span>
+        <div class="time-block">
+          <div class="timer-hour"></div>
+          <div class="timer-hour-title timer-title"></div>
+        </div>
+        <span class="pipe">|</span>
+        <div class="time-block">
+          <div class="timer-minute"></div>
+          <div class="timer-minute-title timer-title"></div>
+        </div>
+        <span class="pipe">|</span>
+        <div class="time-block">
+          <div class="timer-second"></div>
+          <div class="timer-second-title timer-title"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="content">
+    <div class="container">
+      <div class="welcome">
+        <h2 class="title caption animation animation-start main-content">Дорогие друзья,<br>родные и близкие!</h2>
+        <p class="text text-pad animation animation-start main-content">
+          В нашей жизни совсем скоро
+          состоится очень знаменательное
+          событие! День нашей свадьбы!
+          Хотим, чтобы вы разделили с нами
+          эту радость и присутствовали
+          на таком важном мероприятии!
+        </p>
+      </div>
+      <div class="start">
+        <h2 class="title caption animation animation-start main-content">Начало вечеринки в 18:00</h2>
+        <img class="calendar animation animation-start main-content" src="img/calendar.svg" alt="calendar">
+      </div>
+      <div class="awaits">
+        <h2 class="title caption animation animation-start main-content">
+          Что вас ожидает на мероприятии
+        </h2>
+        <p class="text text-pad animation animation-start main-content">
+          Никакой заранее подготовленной программы, никакого ведущего, конкурсов и долгих тостов!
+          Мы очень хотим, чтобы наша свадьба была максимально естественной и непринужденной.
+        </p>
+      </div>
+      <div class="program">
+        <div class="titled-image img1 animation animation-start program-snippet">
+          <img class="icon" src="img/icons/1.png" alt="image">
+          <div class="text">Вэлком<br>зона</div>
+        </div>
+        <img class="arrow arrow-right arrow1 animation animation-start program-snippet" src="img/arrow1.svg" alt="arrow">
+        <div class="titled-image img2 animation animation-start program-snippet">
+          <img class="icon" src="img/icons/2.png" alt="image">
+          <div class="text">Фотозона</div>
+        </div>
+        <img class="arrow arrow-left arrow2 animation animation-start program-snippet" src="img/arrow2.svg" alt="arrow">
+        <div class="titled-image img3 animation animation-start program-snippet">
+          <img class="icon" src="img/icons/3.png" alt="image">
+          <div class="text">Фуршет</div>
+        </div>
+        <img class="arrow arrow-right arrow3 animation animation-start program-snippet" src="img/arrow3.svg" alt="arrow">
+        <div class="titled-image img4 animation animation-start program-snippet">
+          <img class="icon" src="img/icons/4.png" alt="image">
+          <div class="text">Лаунжзона, <br>развлевения</div>
+        </div>
+        <img class="arrow arrow-left arrow4 animation animation-start program-snippet" src="img/arrow4.svg" alt="arrow">
+        <div class="titled-image img5 animation animation-start program-snippet">
+          <img class="icon" src="img/icons/5.png" alt="image">
+          <div class="text">Диджей <br>и танцы</div>
+        </div>
+        <img class="arrow arrow-right arrow5 animation animation-start program-snippet" src="img/arrow5.svg" alt="arrow">
+        <div class="titled-image img6 animation animation-start program-snippet">
+          <img class="icon" src="img/icons/6.png" alt="image">
+          <div class="text">Бармен <br>и фирменные <br> коктейли</div>
+        </div>
+        <img class="arrow arrow-left arrow6 animation animation-start program-snippet" src="img/arrow6.svg" alt="arrow">
+        <div class="titled-image img7 animation animation-start program-snippet">
+          <img class="icon" src="img/icons/7.png" alt="image">
+          <div class="text">Свадебный <br>торт</div>
+        </div>
+      </div>
+      <div class="location">
+        <h2 class="title caption animation animation-start main-content">место проведения</h2>
+        <div class="map"></div>
+        <div class="text animation animation-start main-content">AG LOFT “Веранда” <br> Варшавское ш., 33 с. 3</div>
+      </div>
+      <div class="wishes">
+        <h2 class="title caption animation animation-start main-content">пожелания</h2>
+        <div class="text text-pad animation animation-start main-content">
+          Просим не дарить нам цветы,
+          так как мы не успеем насладиться ими до отъезда.
+          <br><br>
+          Будем очень рады конверту
+          с любой комфортной для вас суммой, это будет большой вклад
+          в наш будущий новый дом.
+          <br><br>
+          Просим не кричать «горько»
+          На нашей свадьбе мы отходим
+          от всевозможных традиций.
+        </div>
+      </div>
+      <div class="accept">
+        <h2 class="title caption animation animation-start main-content">Пожалуйста, подтвердите своё присутствие </h2>
+        <form id="form" class="form">
+          <label class="form-group animation animation-start main-content">
+            <span class="form-label">Имя<span class="form-label-require">&nbsp;*</span></span>
+            <input name="name" class="form-text-field" type="text" placeholder="Введите имя">
+          </label>
+          <label class="form-group animation animation-start main-content">
+            <span class="form-label">Фамилия<span class="form-label-require">&nbsp;*</span></span>
+            <input name="surname" class="form-text-field" type="text" placeholder="Введите фамилию">
+          </label>
+          <div class="form-group animation animation-start main-content">
+            <div class="form-description">Подтвердите свое присутствие<span class="form-label-require">&nbsp;*</span>
+            </div>
+            <label class="form-label">
+              <span class="form-radio-button-outer">
+                <span class="form-radio-button-inner"></span>
+              </span>
+              <input class="form-radio-input" type="radio" name="accept" value="да">
+              <span>Обязательно буду</span>
+            </label>
+            <label class="form-label">
+              <span class="form-radio-button-outer">
+                <span class="form-radio-button-inner"></span>
+              </span>
+              <input class="form-radio-input" type="radio" name="accept" value="нет">
+              <span>Не смогу прийти</span>
+            </label>
+          </div>
+          <div class="form-group animation animation-start main-content">
+            <div class="form-description">Уточните ваши предпочтения в алкоголе, выбрав один или несколько вариантов
+            </div>
+            <label class="form-label">
+              <span class="form-checkbox-button-outer">
+                <span class="form-checkbox-button-inner"></span>
+              </span>
+              <input class="form-checkbox-input" name="redWine" type="checkbox">
+              <span>Красное вино</span>
+            </label>
+            <label class="form-label">
+              <span class="form-checkbox-button-outer">
+                <span class="form-checkbox-button-inner"></span>
+              </span>
+              <input class="form-checkbox-input" name="whiteWine" type="checkbox">
+              <span>Белое вино</span>
+            </label>
+            <label class="form-label">
+              <span class="form-checkbox-button-outer">
+                <span class="form-checkbox-button-inner"></span>
+              </span>
+              <input class="form-checkbox-input" name="champagne" type="checkbox">
+              <span>Шампанское</span>
+            </label>
+            <label class="form-label">
+              <span class="form-checkbox-button-outer">
+                <span class="form-checkbox-button-inner"></span>
+              </span>
+              <input class="form-checkbox-input" name="vodka" type="checkbox">
+              <span>Водка</span>
+            </label>
+            <label class="form-label">
+              <span class="form-checkbox-button-outer">
+                <span class="form-checkbox-button-inner"></span>
+              </span>
+              <input class="form-checkbox-input" name="whiskey" type="checkbox">
+              <span>Виски</span>
+            </label>
+            <label class="form-label">
+              <span class="form-checkbox-button-outer">
+                <span class="form-checkbox-button-inner"></span>
+              </span>
+              <input class="form-checkbox-input" name="cognac" type="checkbox">
+              <span>Коньяк</span>
+            </label>
+            <label class="form-label">
+              <span class="form-checkbox-button-outer">
+                <span class="form-checkbox-button-inner"></span>
+              </span>
+              <input class="form-checkbox-input" type="checkbox">
+              <span>Безалкогольные напитки</span>
+            </label>
+          </div>
+          <input class="form-submit-button animation animation-start main-content" type="submit" value="Отправить">
+        </form>
+      </div>
+    </div>
+    <div class="orient-lt f-pos1">
+      <div class="flower decor animation animation-start"></div>
+    </div>
+    <div class="group group-1 decor animation animation-start"></div>
+    <div class="group group-2 decor animation animation-start"></div>
+    <div class="group group-3 decor animation animation-start">
+      <div class="orient-rb f-pos2">
+        <div class="flower flower-2 decor animation animation-start"></div>
+      </div>
+    </div>
+    <div class="orient-rt f-pos3">
+      <div class="flower decor animation animation-start"></div>
+    </div>
+    <div class="group group-4 decor animation animation-start"></div>
+    <div class="group group-5 decor animation animation-start"></div>
+    <div class="group group-6 decor animation animation-start"></div>
+    <div class="orient-lt f-pos4">
+      <div class="flower decor animation animation-start"></div>
+    </div>
+    <div class="group group-7 decor animation animation-start"></div>
+    <div class="group group-8 decor animation animation-start"></div>
+    <div class="group group-9 decor animation animation-start">
+      <div class="orient-rb f-pos5">
+        <div class="flower decor animation animation-start"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
