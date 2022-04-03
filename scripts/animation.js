@@ -1,10 +1,3 @@
-setTimeout(function () {
-  var headerElements = document.getElementsByClassName('header-text');
-  for (const headerElement of headerElements) {
-    headerElement.classList.add('animation-finish')
-  }
-}, 1000);
-
 document.addEventListener('scroll', handleScroll);
 
 var decors = document.getElementsByClassName('decor');
